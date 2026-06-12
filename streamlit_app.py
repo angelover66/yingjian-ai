@@ -1,24 +1,38 @@
 import streamlit as st
-import os
 
 st.set_page_config(
-    page_title="百胜中国营建系统 AI赋能机会研究",
+    page_title="百胜中国营建 AI赋能",
     page_icon="🏗️",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items=None
 )
 
-# Hide Streamlit UI
+# Force light theme and hide Streamlit UI
 st.markdown("""
 <style>
-    header {visibility: hidden;}
-    footer {visibility: hidden;}
-    .stApp {margin: 0; padding: 0;}
+    #MainMenu, header, footer, .stDeployButton, [data-testid="stToolbar"],
+    [data-testid="stDecoration"], [data-testid="stStatusWidget"] {display: none !important;}
+    .stApp {background: #FAFAF9 !important;}
+    .block-container {padding: 0 !important; margin: 0 !important; max-width: 100% !important;}
+    .stMainBlockContainer {padding: 0 !important; margin: 0 !important; max-width: 100% !important;}
+    .st-emotion-cache-13ln4jf {padding: 0 !important; max-width: 100% !important;}
 </style>
 """, unsafe_allow_html=True)
 
 # Read and display HTML
-html_path = os.path.join(os.path.dirname(__file__), "index.html")
-with open(html_path, "r") as f:
-    html_content = f.read()
+with open("index.html", "r") as f:
+    html = f.read()
 
-st.components.v1.html(html_content, height=10000, scrolling=True)
+# Make HTML background explicit to prevent dark mode bleed
+html = html.replace("var(--bg)", "#FAFAF9")
+html = html.replace("var(--surface)", "#FFFFFF")
+html = html.replace("var(--text)", "#1A1A1A")
+html = html.replace("var(--text-secondary)", "#5A5A5A")
+html = html.replace("var(--text-muted)", "#8A8A8A")
+html = html.replace("var(--border)", "#E8E5E0")
+html = html.replace("var(--red)", "#E4002B")
+html = html.replace("var(--red-dark)", "#B8001F")
+html = html.replace("var(--gold)", "#C8963E")
+
+st.components.v1.html(html, height=20000, scrolling=True)
