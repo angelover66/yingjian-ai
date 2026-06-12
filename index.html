@@ -776,11 +776,9 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
     <ul class="nav-links">
       <li><a href="#overview">画像</a></li>
       <li><a href="#flow">流程</a></li>
-      <li><a href="#pain-detail">痛点速查</a></li>
       <li><a href="#matrix">全景矩阵</a></li>
       <li><a href="#scenes">场景深挖</a></li>
-      <li><a href="#migration">迁移</a></li>
-      <li><a href="#roadmap">路线图</a></li>
+      <li><a href="#migration">经验迁移</a></li>
     </ul>
   </div>
 </nav>
@@ -923,103 +921,11 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
   </div>
 </section>
 
-<!-- PAIN POINTS DETAILED TABLE -->
-<section id="pain-detail">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">03 · 痛点 → AI机会 → 标杆</div>
-      <h2>各环节痛点、AI机会与行业标杆</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="table-wrap reveal">
-      <table>
-        <thead>
-          <tr><th>环节</th><th>核心痛点</th><th>AI机会</th><th style="text-align:center;">优先级</th><th>行业标杆</th><th>可迁移经验</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>选址决策</td>
-            <td>数据分散、测算口径不统一</td>
-            <td>商圈AI评分、物业条件AI预检</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐</td>
-            <td><a href="https://www.globaltimes.cn/page/202511/1348402.shtml" target="_blank">美团龙猫AI</a>（AI选址顾问，1000+品牌10万+报告） · <a href="https://www.qsrmagazine.com/story/how-ai-powered-location-intelligence-is-changing-the-game-for-qsr-chains/" target="_blank">xMap</a>（自然语言选址查询） · <a href="https://go.placer.ai/library/what-high-growth-brands-know-about-picking-the-right-location" target="_blank">Placer.ai</a>（客流分析+蚕食评估）</td>
-            <td><span class="tag tag-gold">数据驱动决策</td>
-          </tr>
-          <tr>
-            <td>设计出图</td>
-            <td>图纸版本混乱、标准靠记忆</td>
-            <td>设计标准RAG知识库、图纸AI审核、AI施工图生成</td>
-            <td style="text-align:center;"><span class="stars stars-hot">⭐⭐⭐⭐⭐</td>
-            <td><a href="https://www.bsia.org.cn/site/content/32163.html" target="_blank">唐吉诃德BIM-Zero</a>（AI生成全套施工图，2h出图成本↓25%） · <a href="https://www.pkpm.cn/news/387" target="_blank">PKPM-AIChecker</a>（万级条文规则库，20+政府平台使用）</td>
-            <td><span class="tag tag-red">项目智能助理 RAG</td>
-          </tr>
-          <tr>
-            <td>报建审批</td>
-            <td>材料手工准备、城市差异大</td>
-            <td>报建材料AI生成、法规RAG、合规自动检查</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐⭐</td>
-            <td><a href="https://www.iccsafe.org/about/periodicals-and-newsroom/international-code-council-collaborates-with-archistar-to-modernize-permitting-and-accelerate-housing-development/" target="_blank">ICC+Archistar</a>（AI自动合规检查，25+城市部署缺陷→零）</td>
-            <td style="color:var(--text-muted);">—</td>
-          </tr>
-          <tr>
-            <td>招标签约</td>
-            <td>清单手工编制、报价难比对</td>
-            <td>工程量清单AI生成、报价AI解析比对、合同AI解析</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐⭐⭐</td>
-            <td><a href="https://www.tmcnet.com/usubmit/2026/04/08/10361075.htm" target="_blank">Bobyard 2.0</a>（AI自动算量，70%自动化时间↓65%） · <a href="https://news.qq.com/rain/a/20260226A06NUM00" target="_blank">浪潮海岳招采</a>（AI审查招标文件，3h→15min准确率>95%）</td>
-            <td><span class="tag tag-red">合同AI解析95%</td>
-          </tr>
-          <tr>
-            <td>施工装修</td>
-            <td>巡检纸质、进度不透明、变更扯皮</td>
-            <td>工地AI巡检、日报AI生成、进度AI预测、变更AI管理</td>
-            <td style="text-align:center;"><span class="stars stars-hot">⭐⭐⭐⭐⭐</td>
-            <td><a href="https://www.asiae.co.kr/en/article/2025102109122147039" target="_blank">GS建设零缺陷</a>（拍照→AI判定缺陷，连续一年零缺陷） · <a href="https://www.enr.com/articles/print/60367-durham-nc-tower-project-team-stays-informed-with-buildots" target="_blank">Buildots</a>（360°摄像头+CV对比BIM，ENR 2025案例报道） · <a href="https://govt.chinadaily.com.cn/s/202603/19/WS69bbcbc7498e23165e06e380/ai-drone-breaks-new-ground-on-sichuan-rail-line.html" target="_blank">成德铁路AI无人机</a>（AI无人机巡检，2架30min巡检18km）</td>
-            <td><span class="tag tag-red">电销Copilot ASR链路</td>
-          </tr>
-          <tr>
-            <td>竣工验收</td>
-            <td>问题追踪靠Excel、整改周期长</td>
-            <td>验收问题AI追踪Agent、验收报告AI生成</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐⭐⭐</td>
-            <td><a href="https://www.bd.gov.hk/doc/en/safety-and-inspection/building-safety/ai_building_facade_defect_identification_specs.pdf" target="_blank">香港屋宇署AI</a>（AI外墙缺陷识别，10层/60户→6h出报告） · <a href="https://www.asiae.co.kr/lang/print.htm?idxno=2025080610191990790&lang=en" target="_blank">Hoban Chaedeul</a>（拍照→AI分类→自动派单，业主实时追踪） · <a href="https://jdxq.haikou.gov.cn/xinwen/2025/show-10081.html" target="_blank">海口江东BIM</a>（BIM智能审查，66个项目审图↓50%）</td>
-            <td><span class="tag tag-red">催收引擎 Agent方法论</td>
-          </tr>
-          <tr>
-            <td>交付开业</td>
-            <td>证照办理不透明</td>
-            <td>证照进度AI追踪</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐</td>
-            <td style="color:var(--text-muted);">—</td>
-            <td style="color:var(--text-muted);">—</td>
-          </tr>
-          <tr>
-            <td>运维闭店</td>
-            <td>设备被动维修、资产盘点靠手工</td>
-            <td>设备故障AI预测、资产AI盘点+调拨匹配</td>
-            <td style="text-align:center;"><span class="stars">⭐⭐⭐</td>
-            <td><a href="https://abound.carrier.com/en/worldwide/media-resources/news/news-articles/carrier-abound-wins-a-2025-sustainability-leadership-award-for-digitally-transforming-building-operations/" target="_blank">Carrier Abound</a>（AI设施能耗管理，33000+门店年省6.67亿kWh） · <a href="https://www.ylsaas.com.cn/sys-nd/8701.html" target="_blank">上海连锁资产AI</a>（AI资产盘点+调拨匹配，3万+件盘活率>78%）</td>
-            <td><span class="tag tag-gold">工时UT管控方法论</td>
-          </tr>
-          <tr>
-            <td>全流程</td>
-            <td>系统割裂、管理层盲飞</td>
-            <td>作战室看板 + 跨店对标 + AI风险预警</td>
-            <td style="text-align:center;"><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--text-muted);">远景</td>
-            <td><a href="https://insights.globalspec.com/article/24628/column-building-an-ai-for-buildings-ai-shouldn-t-optimize-a-task-it-should-help-build-the-entire-store" target="_blank">Surfaice</a>（端到端营建AI Agent，111 playbook交付成本↓30%） · <a href="https://www.hecom.cn/content/details_35_32914.html" target="_blank">广联达</a>（BIM+智慧工地，AI超支预警准确率92%）</td>
-            <td><span class="tag tag-blue">8000+项目纳管经验</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
 <!-- AI×营建全景矩阵 -->
 <section id="matrix" class="section-alt" style="padding:3rem 2rem;">
   <div class="section-inner">
     <div class="section-header reveal" style="margin-bottom:1.5rem;">
-      <div class="section-label">04 · AI×营建全景矩阵</div>
+      <div class="section-label">03 · AI×营建全景矩阵</div>
       <h2>AI×营建机会全景矩阵</h2>
       <p>5大AI技术方向 × 7个营建阶段，系统化覆盖全部AI机会点</p>
       <div class="divider" style="margin-bottom:0.5rem;"></div>
@@ -1056,7 +962,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <tr>
             <td>报建审批</td>
             <td>法规RAG知识库</td>
-            <td><span class="dim">—</td>
+            <td>报建材料AI审核</td>
             <td>审批周期预测</td>
             <td>报建材料AI生成</td>
             <td>审批进度催办</td>
@@ -1064,7 +970,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <tr>
             <td>招标签约</td>
             <td>历史价格RAG</td>
-            <td><span class="dim">—</td>
+            <td>供应商材料审核</td>
             <td>供应商风险预测</td>
             <td>合同AI解析</td>
             <td>招标流程Agent</td>
@@ -1106,7 +1012,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 <section id="scenes">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="section-label">05 · 重点场景深挖</div>
+      <div class="section-label">04 · 重点场景深挖</div>
       <h2>六大AI落地场景</h2>
       <p>底座 → 设计 → 施工 → 成本 → 验收 → 全流程，覆盖进度/成本/质量三条线</p>
       <div class="divider"></div>
@@ -1205,7 +1111,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
         </div>
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem;">
           <strong style="font-size:0.85rem;">合同AI解析</strong>
-          <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:0.2rem;">LLM提取付款条款→自动生成回款计划+质保金提醒。对标<a href="https://news.qq.com/rain/a/20260226A06NUM00" target="_blank">浪潮海岳AI招采</a>（审查3-6h→15min，准确率>95%）。处理时间↓90%</p>
+          <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:0.2rem;">LLM提取付款条款→自动生成付款计划+质保金提醒。复用百度合同AI解析（准确率95%，召回率90%），对标<a href="https://www.benzinga.com/pressreleases/26/04/g51960534/12build-launches-innovations-in-pre-construction" target="_blank">12Build AI</a>（合同条款自动提取，行政负担↓78%）。处理时间↓90%</p>
         </div>
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem;">
           <strong style="font-size:0.85rem;">变更成本估算</strong>
@@ -1274,7 +1180,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 <section id="migration" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="section-label">06 · 经验迁移</div>
+      <div class="section-label">05 · 经验迁移</div>
       <h2>百度云项目AI经验 → 百胜营建AI</h2>
       <p>6项核心能力，一一映射到营建场景</p>
       <div class="divider"></div>
@@ -1285,13 +1191,6 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
         <div class="mig-content">
           <h4>项目智能助理(RAG+Agent)</h4>
           <p>营建知识库+智能助理Agent · 78%自治方法论复用 ⭐⭐⭐⭐⭐</p>
-        </div>
-      </div>
-      <div class="mig-card">
-        <div class="mig-arrow">→</div>
-        <div class="mig-content">
-          <h4>电销AI Copilot(ASR+RAG)</h4>
-          <p>工地AI巡检+施工日报AI生成 · ASR链路同构 ⭐⭐⭐⭐⭐</p>
         </div>
       </div>
       <div class="mig-card">
@@ -1311,6 +1210,13 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
       <div class="mig-card">
         <div class="mig-arrow">→</div>
         <div class="mig-content">
+          <h4>项目交付里程碑管理</h4>
+          <p>多门店里程碑AI追踪+延期预警+催办升级 ⭐⭐⭐⭐⭐</p>
+        </div>
+      </div>
+      <div class="mig-card">
+        <div class="mig-arrow">→</div>
+        <div class="mig-content">
           <h4>PCC绿灯通道(27步→2步)</h4>
           <p>标准化门店AI审批路由 · 提效93%方法论 ⭐⭐⭐⭐</p>
         </div>
@@ -1319,40 +1225,8 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
         <div class="mig-arrow">→</div>
         <div class="mig-content">
           <h4>工时UT系统(8000+项目)</h4>
-          <p>多门店进度看板+延期预警 · 管控方法论 ⭐⭐⭐⭐</p>
+          <p>多门店进度看板+资源调配预警 · 管控方法论 ⭐⭐⭐⭐</p>
         </div>
-      </div>
-    </div>
-    <div class="quote-block reveal" style="margin-top:2rem;">
-      <p><strong>独特壁垒</strong>：能把「合同解析→清单生成→成本估算→变更影响→催办结算」整条成本线打通的AI PM，极少。这是Lulu在百胜营建最不可替代的差异化能力。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section id="roadmap">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div class="section-label">07 · 落地路线图</div>
-      <h2>AI落地建议</h2>
-      <p>先做容错高的，再做高频痛的，最后做全局的</p>
-      <div class="divider"></div>
-    </div>
-    <div class="timeline reveal">
-      <div class="tl-item">
-        <div class="tl-phase">短期 · 2-3个月</div>
-        <h4>营建标准RAG知识库 → 飞书/企微机器人</h4>
-        <p>KFC+必胜客标准文档向量化，标准查询15min→30s，AI自治率≥60%。<strong>立竿见影，快速见效。</strong></p>
-      </div>
-      <div class="tl-item phase2">
-        <div class="tl-phase">中期 · 3-6个月</div>
-        <h4>AI巡检 + 智能助理Agent + 图纸AI审核 + 变更AI管理 + 验收追踪</h4>
-        <p>AI自治率≥70%，巡检效率↑80%。核心场景全覆盖，需要算法团队协作。</p>
-      </div>
-      <div class="tl-item phase3">
-        <div class="tl-phase">长期 · 6-12个月</div>
-        <h4>全品牌覆盖 + 多项目作战室看板 + AI风险自动预警</h4>
-        <p>年省2000+人天，行业标杆。需要前期数据积累和用户信任。</p>
       </div>
     </div>
   </div>
@@ -1362,7 +1236,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
 <section style="background:var(--surface);border-top:1px solid var(--border);">
   <div class="section-inner">
     <div class="section-header reveal">
-      <div class="section-label">08 · 学习计划</div>
+      <div class="section-label">06 · 学习计划</div>
       <h2>快速上手路径</h2>
       <div class="divider"></div>
     </div>
@@ -1374,12 +1248,12 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
       </div>
       <div class="learn-card">
         <div class="learn-num">02</div>
-        <h4>到岗后 第1个月</h4>
-        <p>跟一个完整门店项目走流程 · 访谈各角色（设计师/工程师/监理/项目经理）· 梳理现有系统清单 · 熟悉BIM/CAD基础操作</p>
+        <h4>到岗后 3-4周</h4>
+        <p>跟一个完整门店项目走流程 · 访谈各角色（设计师/工程师/监理/项目经理）· 梳理现有系统清单 · 熟悉BIM/CAD基础操作 · 挖掘各环节AI机会点</p>
       </div>
       <div class="learn-card">
         <div class="learn-num">03</div>
-        <h4>到岗后 第2-3个月</h4>
+        <h4>到岗后 1-3个月</h4>
         <p>输出《营建系统现状地图 + AI切入点优先级建议》· 用数据而非假设驱动决策 · 同步启动首个AI试点（如RAG知识库）</p>
       </div>
     </div>
