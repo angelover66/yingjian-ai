@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>百胜中国品牌生态层级 — 品牌矩阵 × 店型矩阵 × 营建模式</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E4002B; --red-dark: #B8001F; --gold: #C8963E; --gold-light: #E8C97A;
+  --bg: #FAFAF9; --surface: #FFFFFF; --text: #1A1A1A; --text-secondary: #5A5A5A; --text-muted: #8A8A8A;
+  --border: #E8E5E0; --shadow-sm: 0 1px 3px rgba(0,0,0,0.04); --shadow-md: 0 4px 24px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px; --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-0.02em}
+h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15}
+h2{font-size:clamp(1.5rem,3vw,2rem);line-height:1.25}
+h3{font-size:1.1rem;line-height:1.4}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--red)}
+section{padding:3rem 2rem;position:relative}
+.section-inner{max-width:1000px;margin:0 auto}
+.section-header{margin-bottom:2rem}
+.section-header h2{margin-bottom:0.3rem}
+.section-header p{color:var(--text-secondary);font-size:0.95rem;max-width:600px}
+.divider{width:50px;height:3px;background:var(--red);border-radius:2px;margin:0.3rem 0 1.2rem}
+.table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:0.82rem}
+thead{background:var(--red);color:white}
+thead th{padding:0.8rem;text-align:left;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em}
+tbody td{padding:0.7rem 0.8rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
+tbody tr:hover{background:rgba(228,0,43,0.02)}
+tbody tr:last-child td{border-bottom:none}
+td:first-child{font-weight:600;white-space:nowrap}
+.tag{display:inline-block;padding:0.15rem 0.5rem;border-radius:100px;font-size:0.68rem;font-weight:600}
+.tag-red{background:rgba(228,0,43,0.1);color:var(--red)}
+.tag-gold{background:rgba(200,150,62,0.12);color:#8B6914}
+.tag-blue{background:rgba(46,134,171,0.1);color:#2E86AB}
+.tag-green{background:rgba(45,106,79,0.1);color:#2D6A4F}
+.hero{min-height:60vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:5rem 2rem 3rem}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(228,0,43,0.06) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 70%,rgba(200,150,62,0.05) 0%,transparent 50%)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(228,0,43,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(228,0,43,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 30%,transparent 70%)}
+.hero-content{position:relative;z-index:1;text-align:center;max-width:700px}
+.hero-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:0.65rem;font-weight:500;text-transform:uppercase;letter-spacing:0.15em;color:var(--red);border:1px solid rgba(228,0,43,0.25);padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem}
+.hero h1 .highlight{color:var(--red);position:relative}
+.hero h1 .highlight::after{content:'';position:absolute;bottom:3px;left:0;right:0;height:6px;background:rgba(228,0,43,0.12);border-radius:3px;z-index:-1}
+.hero-sub{font-size:1rem;color:var(--text-secondary);max-width:500px;margin:1rem auto 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,249,0.85);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid transparent;transition:all var(--transition);padding:0 2rem}
+nav.scrolled{border-bottom-color:var(--border);box-shadow:var(--shadow-sm)}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--red)}
+.nav-brand span{color:var(--text)}
+.nav-links{display:flex;gap:1.2rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:0.8rem;font-weight:500;color:var(--text-secondary);transition:color var(--transition)}
+.nav-links a:hover{color:var(--red)}
+.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;margin:1.5rem 0}
+.brand-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1rem;text-align:center;transition:all var(--transition);position:relative;overflow:hidden}
+.brand-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.brand-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.brand-card.kfc::before{background:var(--red)}
+.brand-card.ph::before{background:#C8963E}
+.brand-card.tb::before{background:#5D4E8C}
+.brand-card.xfy::before{background:#2E86AB}
+.brand-card.hjh::before{background:#2D6A4F}
+.brand-card.lvz::before{background:#8B4513}
+.brand-card.kc::before{background:#D4A574}
+.brand-card.kpro::before{background:#6B8E23}
+.brand-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:0.1rem}
+.brand-sub{font-size:0.68rem;color:var(--text-muted);margin-bottom:0.3rem}
+.brand-num{font-family:'Source Sans 3',sans-serif;font-size:0.72rem;color:var(--red);font-weight:600}
+.mode-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem 2rem;margin-bottom:1.5rem;transition:all var(--transition)}
+.mode-card:hover{box-shadow:var(--shadow-md)}
+.mode-card h3{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem}
+.mode-badge{font-family:'JetBrains Mono',monospace;font-size:0.6rem;padding:0.2rem 0.6rem;border-radius:100px;font-weight:600;text-transform:uppercase}
+.mode-badge.red{background:rgba(228,0,43,0.1);color:var(--red)}
+.mode-badge.gold{background:rgba(200,150,62,0.12);color:#8B6914}
+.mode-badge.green{background:rgba(45,106,79,0.1);color:#2D6A4F}
+.mode-flow{display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;font-size:0.8rem}
+.mode-node{background:var(--bg);border:2px solid var(--border);border-radius:var(--radius-sm);padding:0.5rem 0.8rem;font-weight:600;font-size:0.78rem}
+.mode-node.red{border-color:var(--red);background:rgba(228,0,43,0.03)}
+.mode-node.gold{border-color:var(--gold);background:rgba(200,150,62,0.05)}
+.mode-arrow{color:var(--red);font-weight:300;font-size:1rem}
+.mode-detail{display:flex;gap:1rem;margin-top:0.8rem;flex-wrap:wrap}
+.mode-stat{flex:1;min-width:140px;background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem 1rem;text-align:center}
+.mode-stat .num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:var(--red);line-height:1}
+.mode-stat .lbl{font-size:0.7rem;color:var(--text-muted);margin-top:0.2rem}
+.quote-block{background:var(--surface);border-left:4px solid var(--red);padding:1.2rem 1.5rem;margin:1.5rem 0;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.quote-block p{font-size:0.85rem;color:var(--text-secondary)}
+footer{text-align:center;padding:3rem 2rem;background:var(--surface);border-top:1px solid var(--border)}
+footer p{color:var(--text-muted);font-size:0.8rem}
+footer a{color:var(--red);text-decoration:none}
+@media(max-width:768px){nav{padding:0 1rem}.nav-links{display:none}.brand-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">百胜中国 <span>品牌生态</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">← 营建AI赋能</a></li>
+      <li><a href="#brands">品牌矩阵</a></li>
+      <li><a href="#formats">店型矩阵</a></li>
+      <li><a href="#modes">创新模式</a></li>
+      <li><a href="#invest">投资对比</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Brand Ecosystem · 2026</div>
+    <h1>百胜中国<span class="highlight">品牌生态层级</span></h1>
+    <p class="hero-sub">8大品牌 × 6种店型 × 5层投资梯度 — 从标准店到肩并肩、双子星，一张图看懂百胜营建的完整品牌矩阵</p>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">01 · 品牌矩阵</div>
+      <h2>8大品牌 × 3个梯队</h2>
+      <p>从核心主力到新势力孵化，百胜中国的品牌版图正在快速扩张</p>
+      <div class="divider"></div>
+    </div>
+    <div class="brand-grid">
+      <div class="brand-card kfc"><div class="brand-name">KFC 肯德基</div><div class="brand-sub">核心主力 · 中式快餐化</div><div class="brand-num">12,600+ 家</div></div>
+      <div class="brand-card ph"><div class="brand-name">Pizza Hut 必胜客</div><div class="brand-sub">核心主力 · 性价比转型</div><div class="brand-num">4,000+ 家</div></div>
+      <div class="brand-card tb"><div class="brand-name">Taco Bell 塔可钟</div><div class="brand-sub">成长品牌 · 墨西哥风味</div><div class="brand-num">扩张中</div></div>
+      <div class="brand-card xfy"><div class="brand-name">小肥羊</div><div class="brand-sub">中式火锅 · 稳定运营</div><div class="brand-num">稳定</div></div>
+      <div class="brand-card hjh"><div class="brand-name">黄记煌</div><div class="brand-sub">中式焖锅 · 稳定运营</div><div class="brand-num">稳定</div></div>
+      <div class="brand-card lvz"><div class="brand-name">Lavazza</div><div class="brand-sub">意式咖啡 · 轻量模型</div><div class="brand-num">增长中</div></div>
+      <div class="brand-card kc"><div class="brand-name">KCOFFEE 肯悦</div><div class="brand-sub">咖啡新势力 · 肩并肩模式</div><div class="brand-num">2,200 家</div></div>
+      <div class="brand-card kpro"><div class="brand-name">KPRO 肯律轻食</div><div class="brand-sub">轻食新势力 · 千店目标</div><div class="brand-num">200 家</div></div>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:0.72rem;color:var(--text-muted);margin-top:0.5rem;">
+      <span><span class="tag tag-red">第一梯队</span> KFC 12,600+ · 必胜客 4,000+ — 两大核心引擎</span>
+      <span><span class="tag tag-gold">第二梯队</span> 塔可钟 · 小肥羊 · 黄记煌 · Lavazza — 多品牌覆盖</span>
+      <span><span class="tag tag-green">第三梯队</span> KCOFFEE 2,200 · KPRO 200 — 新势力孵化</span>
+    </div>
+  </div>
+</section>
+
+<section id="formats" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">02 · 店型矩阵</div>
+      <h2>6种店型 × 5层投资梯度</h2>
+      <p>从200万标准店到50万mini店，百胜用店型分层实现全市场覆盖</p>
+      <div class="divider"></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>店型</th><th>品牌</th><th>单店投资</th><th>面积</th><th>适用市场</th><th>模式特点</th></tr></thead>
+        <tbody>
+          <tr><td>标准店</td><td>KFC · 必胜客</td><td>~200万</td><td>200㎡</td><td>商业街（仅直营）</td><td><span class="tag tag-red">全流程百胜管控</span></td></tr>
+          <tr><td>Mini 店</td><td>KFC</td><td>~50万</td><td>80-120㎡</td><td>小镇/偏远地区</td><td><span class="tag tag-gold">加盟商自主+AI审核</span></td></tr>
+          <tr><td>WOW 店</td><td>必胜客</td><td>65-85万</td><td>120-160㎡</td><td>下沉市场</td><td><span class="tag tag-gold">轻量化+高性价比</span></td></tr>
+          <tr><td>Light Store</td><td>Lavazza</td><td>—</td><td>小型</td><td>咖啡场景</td><td><span class="tag tag-blue">轻量灵活</span></td></tr>
+          <tr><td><strong>肩并肩</strong></td><td>KFC + KCOFFEE</td><td>改造~20万</td><td>KFC店内辟咖啡区</td><td>现有KFC门店</td><td><span class="tag tag-green">存量改造·零新增租金</span></td></tr>
+          <tr><td><strong>双子星</strong></td><td>KFC + 必胜客</td><td>70-80万/对</td><td>共享厨房+员工</td><td>小镇/新区</td><td><span class="tag tag-green">协同效应·单店投资↓60%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="modes">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">03 · 创新营建模式</div>
+      <h2>肩并肩 × 双子星 — 两种革命性开店模型</h2>
+      <p>不是简单的一店两牌，而是从物理空间到运营体系的深度整合</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- 肩并肩 -->
+    <div class="mode-card">
+      <h3>🤝 肩并肩模式 <span class="mode-badge green">存量改造</span></h3>
+      <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.8rem;">在现有KFC门店内辟出独立咖啡区，品牌并排、空间共享、客流互通。<strong>零新增租金，改造成本仅~20万。</strong></p>
+      <div class="mode-flow">
+        <div class="mode-node red">KFC 门店</div><div class="mode-arrow">+</div>
+        <div class="mode-node gold">KCOFFEE 咖啡区</div><div class="mode-arrow">=</div>
+        <div class="mode-node">肩并肩店</div>
+      </div>
+      <div class="mode-detail">
+        <div class="mode-stat"><div class="num">2,200</div><div class="lbl">已开店数</div></div>
+        <div class="mode-stat"><div class="num">~20万</div><div class="lbl">单店改造成本</div></div>
+        <div class="mode-stat"><div class="num">5,000</div><div class="lbl">2029年目标</div></div>
+        <div class="mode-stat"><div class="num">零</div><div class="lbl">新增租金</div></div>
+      </div>
+      <div class="quote-block" style="margin-top:0.8rem;">
+        <p><strong>营建要点</strong>：旧店改造场景——在营业中KFC划出15-30㎡咖啡区，复用现有厨房/水电/员工，施工周期短。AI可赋能：<strong>改造方案AI自动生成 + 施工模拟 + 最小化营业影响</strong>。</p>
+      </div>
+    </div>
+
+    <!-- 双子星 -->
+    <div class="mode-card">
+      <h3>⭐ 双子星模式 <span class="mode-badge red">新店协同</span></h3>
+      <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.8rem;">KFC + 必胜客并排开店，共享厨房、共享员工、共享供应链。<strong>单对投资仅70-80万，比分开开两家店节省约60%。</strong></p>
+      <div class="mode-flow">
+        <div class="mode-node red">KFC</div><div class="mode-arrow">+</div>
+        <div class="mode-node gold">必胜客</div><div class="mode-arrow">→</div>
+        <div class="mode-node" style="border-style:dashed;">共享厨房</div><div class="mode-arrow">+</div>
+        <div class="mode-node" style="border-style:dashed;">共享员工</div>
+      </div>
+      <div class="mode-detail">
+        <div class="mode-stat"><div class="num">70-80万</div><div class="lbl">单对投资</div></div>
+        <div class="mode-stat"><div class="num">↓60%</div><div class="lbl">vs 分开开店</div></div>
+        <div class="mode-stat"><div class="num">2-3年</div><div class="lbl">回本周期</div></div>
+        <div class="mode-stat"><div class="num">小镇/新区</div><div class="lbl">主攻市场</div></div>
+      </div>
+      <div class="quote-block" style="margin-top:0.8rem;">
+        <p><strong>营建要点</strong>：新店开发场景——选址需同时满足两个品牌的商圈条件，设计需统一规划共享区域（厨房/仓储/员工区），施工需协调双品牌开业时间。AI可赋能：<strong>双子星选址AI评分 + 共享空间AI设计 + 双品牌进度协同</strong>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="invest" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">04 · 投资对比</div>
+      <h2>营建投资与回报全景</h2>
+      <p>从50万到200万，不同店型的投资门槛、回本周期、管控模式一览</p>
+      <div class="divider"></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>店型</th><th>投资</th><th>回本周期</th><th>百胜管控</th><th>加盟商自主</th><th>适用品牌</th></tr></thead>
+        <tbody>
+          <tr><td>标准店</td><td>~200万</td><td>3-4年</td><td>全流程</td><td>—</td><td>KFC · 必胜客</td></tr>
+          <tr><td>Mini店</td><td>~50万</td><td>2-3年</td><td>AI审核+抽检</td><td>选址·报建·施工</td><td>KFC</td></tr>
+          <tr><td>WOW店</td><td>65-85万</td><td>2-3年</td><td>设计标准+验收</td><td>施工·报建</td><td>必胜客</td></tr>
+          <tr><td>肩并肩</td><td>改造~20万</td><td>1-1.5年</td><td>改造方案审核</td><td>—</td><td>KFC+KCOFFEE</td></tr>
+          <tr><td>双子星</td><td>70-80万/对</td><td>2-3年</td><td>选址+设计+验收</td><td>施工可选</td><td>KFC+必胜客</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="quote-block">
+      <p><strong>核心洞察</strong>：店型越轻、投资越低、回本越快——但品牌一致性的底线不能破。AI的价值在于：<strong>让轻店型也能享受标准店型同等级别的品控能力</strong>，用AI巡检替代人工巡检，用AI设计替代逐店定制。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>百胜中国品牌生态层级 · 2026.06 · <a href="index.html">返回营建AI赋能主页</a></p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+</script>
+</body>
+</html>
