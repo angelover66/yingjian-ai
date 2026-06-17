@@ -1068,25 +1068,36 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
       <div class="divider"></div>
     </div>
 
-        <!-- 4.1 知识库 -->
+    <!-- 4.1 知识库 -->
     <div class="scene-card reveal" style="margin-bottom:2rem;">
-      <div style="display:flex;align-items:baseline;gap:0.6rem;margin-bottom:0.6rem;">
+      <div style="display:flex;align-items:baseline;gap:0.6rem;margin-bottom:0.8rem;">
         <span style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--red);line-height:1;">01</span>
         <div>
           <h3 style="margin:0;">营建知识库 + 智能助理Agent</h3>
           <span style="font-size:0.78rem;color:var(--text-muted);">底座层 — 所有AI能力的知识基础</span>
         </div>
       </div>
-      <div class="scene-items" style="gap:0.4rem;">
-        <div class="si-item"><div class="si-num">L1</div><div class="si-body"><strong>知识获取：多源多模态</strong><p>PDF手册 · CAD/BIM图纸 · 巡检照片 · 合同条款 · 各城市消防/卫生法规自动入库。</p></div></div>
-        <div class="si-item"><div class="si-num">L2</div><div class="si-body"><strong>知识组织：结构化+关联</strong><p>跨品牌标准映射（KFC vs 必胜客 vs 塔可钟）、版本管理、关联图谱、法规冲突检测。</p></div></div>
-        <div class="si-item"><div class="si-num">L3</div><div class="si-body"><strong>知识应用：从被动到主动</strong><p>设计时自动推送相关标准；拍照"这个布局有问题吗？"→AI对比回答；按项目阶段触发场景化知识卡片。</p></div></div>
-        <div class="si-item"><div class="si-num">L4</div><div class="si-body"><strong>知识进化：经验不流失</strong><p>豁免案例库、最佳实践自动提取、失败案例避坑、老工程师对话式经验萃取。</p></div></div>
-        <div class="si-item"><div class="si-num">L5</div><div class="si-body"><strong>知识服务：多角色差异化</strong><p>百胜团队用深度技术问答 → 加盟商用场景化指引 → 施工方用验收自检 → 监理用缺陷判定标准。</p></div></div>
+      <div class="table-wrap" style="margin:0.8rem 0;">
+        <table style="font-size:0.8rem;">
+          <thead><tr><th>场景</th><th>现在</th><th>AI后</th></tr></thead>
+          <tbody>
+            <tr><td>标准查询</td><td>翻150页KFC营建手册PDF，15分钟</td><td>飞书里问"KFC厨房最小面积？"→3秒回答+引用来源</td></tr>
+            <tr><td>图纸审核</td><td>人工逐项比对营建标准</td><td>上传施工图→AI自动比对→标记不符合项</td></tr>
+            <tr><td>多品牌切换</td><td>设计师靠记忆区分KFC vs 必胜客标准</td><td>同一问题自动识别品牌→给出对应答案</td></tr>
+            <tr><td>新人培训</td><td>6-12个月，全靠老师傅带</td><td>RAG知识库+AI问答，上手周期↓50%</td></tr>
+            <tr><td>知识沉淀</td><td>经验在工程师脑子里，离职即流失</td><td>高频问答自动聚类→FAQ沉淀→知识库自循环</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-<!-- 4.2 设计 -->
+
+    <!-- 4.2 设计 -->
     <div class="scene-card reveal" style="margin-bottom:2rem;">
+
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;">
+        <span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span>
+        <span style="font-size:0.78rem;color:var(--text-secondary);">6品牌各有独立营建标准，设计师靠记忆翻PDF，图纸版本从V1改到V8不知哪版最新。新设计师上手要6-12个月</span>
+      </div>
       <div style="display:flex;align-items:baseline;gap:0.6rem;margin-bottom:0.8rem;">
         <span style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--red);line-height:1;">02</span>
         <div>
@@ -1094,6 +1105,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <span style="font-size:0.78rem;color:var(--text-muted);">源头层 — 设计错了，施工、成本、验收全错。门店80%标准化让AI更容易发挥作用</span>
         </div>
       </div>
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;"><span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span> <span style="font-size:0.78rem;color:var(--text-secondary);">6品牌各自独立营建标准，设计师靠记忆翻PDF。图纸版本从V1改到V8，不知道哪版最新。新设计师上手6-12个月，全靠师傅带。</span></div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:1rem;">
           <p style="font-weight:700;font-size:0.85rem;margin-bottom:0.3rem;">① AI施工图生成</p>
@@ -1119,6 +1131,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <span style="font-size:0.78rem;color:var(--text-muted);">主战场 — 工作量最大、参与方最多、信息最碎片化</span>
         </div>
       </div>
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;"><span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span> <span style="font-size:0.78rem;color:var(--text-secondary);">巡检靠纸质checklist拍照→回办公室整理报告。几百个在施工门店，进度靠微信群同步。变更多为口头约定，结算时扯皮。材料到场验收流于形式。</span></div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
         <div style="background:var(--bg);border-left:3px solid var(--red);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:0.8rem;">
           <strong style="font-size:0.85rem;">AI工地巡检</strong>
@@ -1148,6 +1161,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <span style="font-size:0.78rem;color:var(--text-muted);">贯穿层 — 从预算到结算全链路，成本管控的核心</span>
         </div>
       </div>
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;"><span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span> <span style="font-size:0.78rem;color:var(--text-secondary);">工程量清单靠手工编制，容易漏项错项。供应商报价格式各异，人工横向比对效率低。设计变更后成本重算靠Excel，滞后且易出错。结算时变更签证追溯困难。</span></div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem;">
           <strong style="font-size:0.85rem;">清单AI生成</strong>
@@ -1177,6 +1191,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <span style="font-size:0.78rem;color:var(--text-muted);">闭环层 — 质量最后关口。消防/卫生/环保/食药监多部门，问题不闭环直接影响开业</span>
         </div>
       </div>
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;"><span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span> <span style="font-size:0.78rem;color:var(--text-secondary);">验收问题追踪靠Excel，一个门店整改清单50+条，闭环周期以周计。证照办理进度不透明，不知道卡在哪个部门。验收标准和施工标准不一致，反复整改。</span></div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem;">
           <strong style="font-size:0.85rem;">问题AI追踪Agent</strong>
@@ -1202,6 +1217,7 @@ footer p { color: var(--text-muted); font-size: 0.85rem; }
           <span style="font-size:0.78rem;color:var(--text-muted);">远景层 — 串联所有单点AI能力，从"AI工具"到"AI驱动决策"的质变</span>
         </div>
       </div>
+      <div style="margin-bottom:0.8rem;padding:0.6rem 0.8rem;background:rgba(228,0,43,0.04);border-left:3px solid var(--red);border-radius:0 6px 6px 0;"><span style="font-size:0.78rem;color:var(--red);font-weight:600;">🔴 痛点</span> <span style="font-size:0.78rem;color:var(--text-secondary);">管理层看不到全局——几百个门店各自到了什么阶段、哪些有延期风险、成本是否超预算，全凭周报和口头汇报。多项目之间的经验无法共享，每个项目都在重复踩坑。</span></div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
         <div style="background:var(--bg);border-radius:var(--radius-sm);padding:0.8rem;">
           <strong style="font-size:0.85rem;">多项目作战室看板</strong>
